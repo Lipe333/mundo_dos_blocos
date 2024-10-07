@@ -4,7 +4,7 @@ O código implementa um planejador para o mundo de blocos, onde blocos podem ser
 
 ## Passo 1: executando o planejador
 
-Com o código carregado no ambiente, executar o planejador para encontrar um plano que alcance as metas a partir do estado inicial.
+Com o código `blocos.pl` carregado no ambiente, execute o planejador para encontrar um plano que alcance as metas a partir do estado inicial.
 
 1. Chame o predicado `solve/1` para encontrar o plano:
 
@@ -12,11 +12,11 @@ Com o código carregado no ambiente, executar o planejador para encontrar um pla
    ?- solve(Plan).
    ```
 
-2. O Prolog tentará encontrar um plano e exibirá o resultado para a variável `Plan`.
+2. O programa encontrará um plano e exibirá o resultado para a variável `Plan`.
 
 ## Passo 2: interpretando os resultados
 
-Se o planejador encontrar um plano, você verá algo como:
+Se o planejador encontrar um plano, a saída será algo como:
 
 ```prolog
 Plan = [
@@ -53,7 +53,7 @@ Para imprimir o plano de forma mais legível, você pode usar o predicado `print
 
 ### Verificando se as Metas Foram Alcançadas
 
-As metas especificadas são:
+As metas especificadas nó código são:
 
 - `on(c, a)`
 - `on(a, d)`
@@ -66,7 +66,7 @@ As metas especificadas são:
 
 Após executar o plano, todas essas metas devem ser satisfeitas.
 
-# Sessão para responder questões do pdf aqui
+# Respostas das perguntas do documento T1_MundoDosBlocos_02.pdf
 
 ## 1. Com base nos exemplos das seções 2.3 e 3.2 do livro do Russel, faça uma formulação completa do problema do mundo dos blocos deste trabalho, e descreva
 
@@ -143,13 +143,13 @@ Esta tabela segue o modelo PEAS (Desempenho, Ambiente, Atuadores e Sensores) aju
 ## 3. Considere a Situação 1 (página 4) e gere manualmente com sua linguagem, ou os passos do seu programa se conseguir, o plano ações para ir do estado.
 Baseado nas ações fornecidas para cada situação, vamos descrever a interpretação de cada uma das sequências de movimentos:
 
-### Sequência 1: estado *i1* até *i2*
+### Sequência 1: estado S<sub>inicial</sub> = *i1* até  S<sub>final</sub> = *i2*
 1. **`move(d, a, c) at pos(1)`**: Mova `d` de cima de `a` para cima de `c` na posição 1.
 2. **`move(a, 4, b) at pos(6)`**: Mova `a` da posição 4 para cima de `b` na posição 6.
 3. **`move(d, c, 3)`**: Mova `d` de cima de `c` para a posição 3.
 4. **`move(a, b, c) at pos(1)`**: Mova `a` de cima de `b` para cima de `c` na posição 1.
 
-### Sequência 2: estado *i2* até *i2 (a)*
+### Sequência 2: estado S<sub>inicial</sub> = *i2* até S<sub>final</sub> = *i2 (a)*
 1. **`move(b, 6, c) at pos(2)`**: Mova `b` da posição 6 para cima de `c` na posição 2.
 2. **`move(d, 3, 4)`**: Mova `d` da posição 3 para a posição 4.
 3. **`move(b, c, d) at pos(6)`**: Mova `b` de cima de `c` para cima de `d` na posição 6.
@@ -157,7 +157,7 @@ Baseado nas ações fornecidas para cada situação, vamos descrever a interpret
 5. **`move(c, 1, a) at pos(5)`**: Mova `c` da posição 1 para cima de `a` na posição 5.
 
 
-### Sequência 3: estado *i2* até *i2 (b)*
+### Sequência 3: estado S<sub>inicial</sub> *i2* até S<sub>final</sub> = *i2 (b)*
 1. **`move(b, 6, c) at pos(2)`**: Mova `b` da posição 6 para cima de `c` na posição 2.
 2. **`move(d, 3, 4)`**: Mova `d` da posição 3 para a posição 4.
 3. **`move(b, c, 3)`**: Mova `b` de cima de `c` para a posição 3.
@@ -168,7 +168,7 @@ Baseado nas ações fornecidas para cada situação, vamos descrever a interpret
 8. **`move(a, 2, c) at pos(6)`**: Mova `a` da posição 2 para cima de `c` na posição 6.
 
 
-### Sequência 4: estado *i2* até *i2 (c)*
+### Sequência 4: estado S<sub>inicial</sub> *i2* até S<sub>final</sub> = *i2 (c)*
 1. **`move(b, 6, c) at pos(2)`**: Mova `b` da posição 6 para cima de `c` na posição 2.
 2. **`move(d, 3, 4)`**: Mova `d` da posição 3 para a posição 4.
 3. **`move(a, c, 3)`**: Mova `a` de cima de `c` para a posição 3.
@@ -178,7 +178,7 @@ Baseado nas ações fornecidas para cada situação, vamos descrever a interpret
 7. **`move(d, c, c) at pos(1)`**: Mova `d` de cima de `c` para cima de `c` na posição 1.
 
 
-### Sequência 5: estado *i1* até *i2*
+### Sequência 5: estado S<sub>inicial</sub> *i1* até S<sub>final</sub> = *i2*
 Essa sequência é idêntica à Sequência 1:
 1. **`move(d, a, c) at pos(1)`**: Mova `d` de cima de `a` para cima de `c` na posição 1.
 2. **`move(a, 4, b) at pos(6)`**: Mova `a` da posição 4 para cima de `b` na posição 6.
