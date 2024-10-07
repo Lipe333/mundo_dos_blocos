@@ -4,7 +4,7 @@ O código implementa um planejador para o mundo de blocos, onde blocos podem ser
 
 ## Passo 1: executando o planejador
 
-Agora que o código está carregado, vamos executar o planejador para encontrar um plano que alcance as metas a partir do estado inicial.
+Com o código carregado no ambiente, executar o planejador para encontrar um plano que alcance as metas a partir do estado inicial.
 
 1. Chame o predicado `solve/1` para encontrar o plano:
 
