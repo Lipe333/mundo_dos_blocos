@@ -1,3 +1,8 @@
+# Autores
+ - Caio César Macedo Antunes - 22153136
+ - Felipe Rocha Spitale - 22154141
+ - Pedro Henrique Souza Santos - 22060035 
+
 # Planejador em Prolog para o Mundo de Blocos
 
 O código implementa um planejador para o mundo de blocos, onde blocos podem ser movidos entre posições e empilhados uns sobre os outros. O objetivo é encontrar uma sequência de movimentos que transforme o estado inicial em um estado que satisfaça todas as metas especificadas.
